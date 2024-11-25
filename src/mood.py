@@ -1,3 +1,4 @@
+#mood.py
 import random
 import pyttsx3
 
@@ -19,6 +20,21 @@ angry_list = ["angry", "irate", "enraged", "furious", "livid", "incensed", "outr
 depressed_list = ["depressed", "downhearted", "melancholic", "disheartened", "blue", "low", "despondent", "despairing", "dismal", "gloomy", "forlorn", "sorrowful", "mournful", "wretched", "hopeless", "discouraged", "downtrodden", "disconsolate", "downcast", "miserable", "heavy-hearted", "sad", "unhappy", "glum", "joyless", "lugubrious", "morose", "somber", "sullen", "woeful", "tearful", "weepy", "weeping", "sulky", "pessimistic", "defeated", "crestfallen", "brokenhearted", "dejected", "desolate", "heartbroken", "inconsolable", "morbid", "unconsolable"]
 
 suicidal_list = ["suicidal", "hopeless", "desperate", "worthless", "overwhelmed", "lost", "trapped", "unbearable", "broken", "alone", "helpless", "painful", "endless", "darkness", "ending it", "ending my life", "cannot go on", "no way out", "giving up", "life is meaningless", "thinking of suicide", "suicide thoughts", "ending it all", "just want it to stop", "can't go on", "want to die", "don't want to live", "no reason to live", "wish I were dead", "I'm a burden", "tired of life", "nothing to live for", "fade away", "wish it would end", "permanent solution", "escape the pain", "end the suffering", "last resort"]
+
+# Generalized mood response handler
+def handle_mood_responses(userInput):
+    if any(word in userInput for word in happy_list):
+        happy_mood_responses()
+    elif any(word in userInput for word in sad_list):
+        sad_mood_responses()
+    elif any(word in userInput for word in angry_list):
+        angry_mood_responses()
+    elif any(word in userInput for word in depressed_list):
+        depressed_mood_responses()
+    elif any(word in userInput for word in suicidal_list):
+        suicidal_mood_responses()
+    else:
+        general_responses()
 
 # def for mood specificy responses 
 def happy_mood_responses():
