@@ -1,52 +1,30 @@
-import pyttsx3
-import speech_recognition as sr
-import datetime
-import wikipedia
-import webbrowser
-import os
-from mood import (happy_list, sad_list, angry_list, depressed_list, suicidal_list,
-                  happy_mood_responses, sad_mood_responses, angry_mood_responses,
-                  depressed_mood_responses, suicidal_mood_responses, general_responses)
-from functions import (speak, speak_and_print, takecommand, wishme)
+from functions import wishme, takecommand, speak_and_print, is_assistant_task, handle_assistant_task, handle_therapist_mode
+def main():
+    speak_and_print("Hello! I'm Thea. Would you like to talk or chat?")
+    
+    # Choose mode: 'talk' or 'chat'
+    mode = input("Type 'talk' for voice input or 'chat' for text input: ").strip().lower()
 
-# Initialize the text-to-speech engine
-engine = pyttsx3.init()
-voices = engine.getProperty("voices")
-engine.setProperty("voice", voices[1].id)  # Adjust as per your preference
+    if mode not in ["talk", "chat"]:
+        speak_and_print("Sorry, I didn't understand that. Please restart and choose 'talk' or 'chat'.")
+        return
+
+    wishme()
+    
+    while True:
+        if mode == "talk":
+            user_input = takecommand().lower()
+        else:
+            user_input = input("You: ").strip().lower()
+        
+        if user_input in ["exit", "quit"]:
+            speak_and_print("Goodbye! Take care.")
+            break
+        
+        if is_assistant_task(user_input):
+            handle_assistant_task(user_input)
+        else:
+            handle_therapist_mode(user_input)
 
 if __name__ == "__main__":
-    wishme()
-    while True:
-        userInput = takecommand()
-
-        # Therapist Mode (Thea) logic
-        if any(word in userInput for word in happy_list):
-            happy_mood_responses()
-        elif any(word in userInput for word in sad_list):
-            sad_mood_responses()
-        elif any(word in userInput for word in angry_list):
-            angry_mood_responses()
-        elif any(word in userInput for word in depressed_list):
-            depressed_mood_responses()
-        elif any(word in userInput for word in suicidal_list):
-            suicidal_mood_responses()
-        elif "ok thanks for the session" in userInput:
-            speak_and_print("Ok then, see you next time.")
-            break
-        # Assistant Mode (Emma) logic
-        elif "wikipedia" in userInput:
-            speak("Searching Wikipedia...")
-            results = wikipedia.summary(userInput.replace("wikipedia", ""), sentences=2)
-            speak_and_print("According to Wikipedia")
-            speak_and_print(results)
-        elif "youtube" in userInput:
-            webbrowser.open("https://www.youtube.com/")
-        elif "google" in userInput:
-            webbrowser.open("https://www.google.com/")
-        elif "email" in userInput:
-            webbrowser.open("https://mail.google.com/")
-        elif "bye" in userInput or "close" in userInput:
-            speak_and_print("Goodbye! Have a great day!")
-            break
-        else:
-            general_responses()
+    main()
