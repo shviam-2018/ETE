@@ -1,26 +1,2 @@
 ETE/
 reference/
-ete-react/node_modules
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-ete-react//.pnp
-ete-react/.pnp.js
-
-# testing
-ete-react//coverage
-
-# production
-ete-react//build
-
-# misc
-ete-react/.DS_Store
-ete-react/.env.local
-ete-react/.env.development.local
-ete-react/.env.test.local
-ete-react/.env.production.local
-
-ete-react/npm-debug.log*
-ete-react/yarn-debug.log*
-ete-react/yarn-error.log*
