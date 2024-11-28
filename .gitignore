@@ -1,2 +1,4 @@
 ETE/
 reference/
+venv/
+.vscode/
