@@ -40,16 +40,16 @@ def takecommand():
 def wishme():
     hour = int(datetime.datetime.now().hour)
     if 0 <= hour < 12:
-        print("Good morning!")
+        print("Good morning!🌞")
         
     elif 12 <= hour < 18:
-        print("Good afternoon")
+        print("Good afternoon🌆")
         
     elif 18 <= hour < 21:
-        print("Good evening!")
+        print("Good evening!🌅")
         
     else:
-        print("Good night")
+        print("Good night🌙")
 
 def chat():
     print("Welcome to ETE! Your AI friend is here to chat with you. 😊")

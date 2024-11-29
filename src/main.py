@@ -1,6 +1,6 @@
 #main.py
 from functions import (wishme, chat)
-from mood import ( happy_list, sad_list, angry_list, leaving_list, happy_mood_responses, sad_mood_responses, angry_mood_responses, userLeaving, general_responses)
+from mood import ( happy_list, sad_list, angry_list, bullying_list, suicidal_list, depressed_list, leaving_list, happy_mood_responses, sad_mood_responses, angry_mood_responses, bullying_mood_responses, suicidal_mood_responses, depressed_mood_responses, userLeaving, general_mood_responses)
 
 mood = "NONE"
 
@@ -30,7 +30,22 @@ while True:
              mood="angry"
              print(f"[Detected Mood {mood}]")
              angry_mood_responses()
-            
+
+        elif any(word in user_statement for word in bullying_list):
+             mood="bullying"
+             print(f"[Detected Mood: {mood}]")
+             bullying_mood_responses()
+
+        elif any(word in user_statement for word in suicidal_list):
+             mood="suicidal"
+             print(f"[Detected Mood: {mood}]")
+             suicidal_mood_responses()
+
+        elif any(word in user_statement for word in depressed_list):
+             mood="depressed"
+             print(f"[Detected Mood: {mood}]")
+             depressed_mood_responses()    
+
         elif any(word in user_statement for word in leaving_list):
              mood="leaving"
              print(f"[Detected mood: {mood}]")
@@ -40,6 +55,6 @@ while True:
         else:
             mood = "General"
             print(f"[Detected Mood: {mood}]")
-            general_responses()
+            general_mood_responses()
 
 

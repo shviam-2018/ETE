@@ -11,13 +11,63 @@ def speak(audio):
     engine.runAndWait()
 
 # Expanded mood lists with 40+ triggers
-happy_list = ["happy", "great", "good", "joyful", "excited", "grateful", "proud", "content", "delighted", "cheerful", "ecstatic", "jovial", "elated", "radiant", "upbeat", "hopeful", "optimistic", "fulfilled", "glad", "exuberant", "merry", "festive", "positive", "inspired", "blissful", "gleeful", "vivacious", "spirited", "vibrant", "uplifted", "buoyant", "triumphant", "jubilant", "cheery", "heartened", "sunny", "bright", "euphoric", "lighthearted", "overjoyed", "wonderful"]
+happy_list = [
+"happy", "great", "good", "joyful", "excited", "grateful", "proud", "content", "delighted",
+ "cheerful", "ecstatic", "jovial", "elated", "radiant", "upbeat", "hopeful", "optimistic", "fulfilled", 
+ "glad", "exuberant", "merry", "festive", "positive", "inspired", "blissful", "gleeful", "vivacious", 
+ "spirited", "vibrant", "uplifted", "buoyant", "triumphant", "jubilant", "cheery", "heartened", "sunny", 
+ "bright", "euphoric", "lighthearted", "overjoyed", "wonderful"]
 
-sad_list = ["sad", "down", "unhappy", "melancholy", "disappointed", "heartbroken", "blue", "low", "weary", "gloomy", "sullen", "mournful", "pensive", "dismal", "crestfallen", "forlorn", "despondent", "hopeless", "heavy-hearted", "tearful", "wistful", "downcast", "somber", "woeful", "dejected", "defeated", "lonely", "disheartened", "gutted", "hurt", "aching", "withdrawn", "sorrowful", "tearful", "weeping", "morose", "lugubrious", "desolate", "regretful", "dispirited", "low-spirited"]
+sad_list = [
+"sad", "down", "unhappy", "melancholy", "disappointed", "heartbroken", "blue", "low", "weary",
+ "gloomy", "sullen", "mournful", "pensive", "dismal", "crestfallen", "forlorn", "despondent", "hopeless",
+ "heavy-hearted", "tearful", "wistful", "downcast", "somber", "woeful", "dejected", "defeated", "lonely",
+ "disheartened", "gutted", "hurt", "aching", "withdrawn", "sorrowful", "tearful", "weeping", "morose", 
+"lugubrious", "desolate", "regretful", "dispirited", "low-spirited"]
 
-angry_list = ["angry", "mad", "furious", "annoyed", "irritated", "frustrated", "upset", "agitated", "livid", "cross", "resentful", "outraged", "fuming", "enraged", "hot-headed", "indignant", "infuriated", "provoked", "vexed", "displeased", "hostile", "irascible", "miffed", "peeved", "cranky", "grumpy", "snappy", "touchy", "short-tempered", "irate", "testy", "ticked off", "pissed", "wrathful", "raging", "explosive", "steamed", "boiling", "snappish", "tetchy", "bristling"]
+angry_list = [
+    "angry", "mad", "furious", "annoyed", "irritated", "frustrated", "upset", 
+"agitated", "livid", "cross", "resentful", "outraged", "fuming", "enraged", "hot-headed", "indignant",
+ "infuriated", "provoked", "vexed", "displeased", "hostile", "irascible", "miffed", "peeved", "cranky",
+"grumpy", "snappy", "touchy", "short-tempered", "irate", "testy", "ticked off", "pissed", "wrathful",
+"raging", "explosive", "steamed", "boiling", "snappish", "tetchy", "bristling"]
 
-leaving_list = ["bye", "goodbye", "gtg", "talk later", "see you", "catch you later", "take care", "I'm leaving", "I'm out", "peace", "later", "I'm off", "done for today", "have to go", "until next time", "I'm heading out", "see ya", "time to go", "I'm off now", "heading out"]
+bullying_list = [
+    "fuck you", "useless", "do better", "disappointment", "good for nothing", 
+    "worthless", "stupid", "idiot", "pathetic", "failure", 
+    "loser", "hopeless", "hate you", "go away", "dumb", 
+    "garbage", "shit", "annoying", "worthless", "waste of space", 
+    "awful", "terrible", "ugly", "useless", "pointless", 
+    "broken", "dissapointing", "crap", "good for nothing", "can't do anything right", 
+    "unwanted", "empty", "disgusting", "sucks", "messed up", "worthless", 
+    "pathetic", "no good", "nobody cares", "fail", "nobody loves you"
+]
+
+suicidal_list = [
+    "kys", "die", "end it", "no point", "the world is better off without me", 
+    "suicide", "kill myself", "it's over", "i can't go on", "i'm done", 
+    "i'm tired of living", "nobody will care", "no way out", "everything hurts", 
+    "nobody loves me", "i'm worthless", "goodbye", "i can't do this anymore", 
+    "just let me go", "i don't matter", "nothing matters", "no one will miss me", 
+    "too tired to care", "i'm alone", "hopeless", "empty", "nothing will get better", 
+    "i feel numb", "i want to disappear", "leave me alone", "i'm a burden"
+]
+
+depressed_list = [
+    "tired", "worthless", "waste of time", "broken", "nothing matters", 
+    "i can't", "sad", "hopeless", "empty", "i don't care", 
+    "pointless", "miserable", "unhappy", "unmotivated", "stressed", 
+    "defeated", "drained", "down", "out of energy", "too much", 
+    "overwhelmed", "stuck", "low", "unimportant", "weak", 
+    "lost", "lonely", "unwanted", "empty inside", "not enough", 
+    "depressed", "unfocused", "slow", "can't go on", "tired of trying", 
+    "feeling bad", "alone", "burned out", "isolated"
+]
+
+leaving_list = [
+"bye", "goodbye", "gtg", "talk later", "see you", "catch you later", "take care", 
+"I'm leaving", "I'm out", "peace", "later", "I'm off", "done for today", "have to go", "until next time", 
+"I'm heading out", "see ya", "time to go", "I'm off now", "heading out"]
 
 # Friendlier responses with 20+ variations
 def happy_mood_responses():
@@ -98,6 +148,81 @@ def angry_mood_responses():
     response = random.choice(responses)
     print(f"ETE: {response}")
 
+def bullying_mood_responses():
+    responses = [
+    "I hear your frustration. Let's try to turn things around together. What's on your mind?",
+    "I understand you're feeling upset. I'm here to listen if you want to talk more.",
+    "It's okay to feel frustrated, but let's work through it. I believe in you.",
+    "I know you're upset, but let's keep the conversation positive. I'm here to support you.",
+    "It's tough sometimes, but we can work through this. What would help you feel better?",
+    "You're feeling angry right now, and that's okay. But I want to help you feel better.",
+    "I know things are hard, but we'll get through it together. How can I help?",
+    "I'm here to listen, and we can talk about what's bothering you.",
+    "Let's focus on ways to feel better. I believe you can overcome this.",
+    "It's hard when you feel this way. Want to talk more about what's going on?",
+    "Frustration is normal, but we can work through it together. What can we do to feel better?",
+    "I see that you're frustrated, and I get that. But let's work on finding solutions.",
+    "I hear you, and I'm here for you. Let's work through these feelings together.",
+    "When you're ready, I'd like to hear what's on your mind.",
+    "I know you're upset, but I'm here to help. What's bothering you the most?",
+    "Let's take a deep breath. You're not alone in this. I'm here with you.",
+    "You don't have to handle this alone. I'm here to listen.",
+    "I understand you're angry, but let's see if we can find a way to make things better.",
+    "It's okay to feel mad. I'm here to help you through it."
+]
+    response = random.choice(responses)
+    print(f"ETE: {response}")
+
+def suicidal_mood_responses():
+    responses = [
+    "I'm really sorry you're feeling this way. You're important, and I care about you. Please talk to someone you trust.",
+    "I hear that you're going through something difficult, but you don't have to face it alone. There are people who can help.",
+    "I'm really concerned. It might be helpful to talk to someone who can offer support, like a friend or professional.",
+    "I'm here for you, but it's really important you talk to someone who can help. You matter so much.",
+    "I'm really sorry you're feeling like this. It's okay to ask for help. You are valued.",
+    "I care about you, and I don't want you to go through this alone. Please reach out to someone who can support you.",
+    "It's tough right now, but you don't have to carry this weight by yourself. Please talk to someone you trust.",
+    "I'm here, but it's important to talk to someone who can help. You matter to so many people.",
+    "Your feelings are valid, but you don't have to go through this alone. Reach out to someone who can support you.",
+    "You're not alone. There are people who want to listen and help. Don't be afraid to reach out.",
+    "I know you're in pain, and I'm really sorry you're feeling this way. Please talk to someone who can help.",
+    "I'm so sorry you're feeling like this. Please tell someone you trust so they can help you through it.",
+    "I'm really concerned about you. Please talk to someone who can give you the support you need.",
+    "You are loved and you matter. Please reach out to someone who can help you during this time.",
+    "I'm really sorry you're feeling like this, but you don't have to face it alone. Talk to someone who can help.",
+    "I care about you, and I really want you to be safe. Please reach out to someone you trust for help.",
+    "It's okay to ask for help, and I want to make sure you get the support you need. You are important.",
+    "I'm so sorry you're feeling this way. Please talk to someone who can give you the help and support you deserve.",
+    "Your feelings matter, and you don't have to go through this alone. Please talk to someone who can offer help."
+]
+    response = random.choice(responses)
+    print(f"ETE: {response}")
+
+def depressed_mood_responses():
+    responses = [
+    "I can hear that you're feeling down. Do you want to share what's been bothering you?",
+    "I'm really sorry you're feeling this way. Let's take things one step at a time.",
+    "You're not alone in this. I'm here to listen if you want to talk more.",
+    "It's okay to feel down sometimes. I'm here for you, just let me know how I can help.",
+    "You matter, and I care about what you're going through. I'm here if you want to talk.",
+    "It sounds like you're going through a rough time. I'm here to listen if you want to share more.",
+    "It's okay to feel overwhelmed. Let's take things one step at a time.",
+    "Sometimes it helps to talk it out. What's on your mind right now?",
+    "I know things are tough, but you don't have to go through this alone. Let's talk about it.",
+    "You're important to me, and I want to help you through this. What can I do to support you?",
+    "I'm here for you. It's okay to feel sad, but you don't have to carry it alone.",
+    "It can feel really heavy sometimes, but I'm here to listen if you want to talk about it.",
+    "I hear that you're feeling low. It's okay, we can take things slowly together.",
+    "You don't have to do this alone. I'm here to listen if you want to talk more about it.",
+    "I care about what you're going through. Would you like to share more about how you're feeling?",
+    "Sometimes it helps to take a step back and talk through what you're feeling. I'm here for you.",
+    "I know it feels like a lot right now. But we can work through this together. What would help?",
+    "I'm here to listen, and I care about how you're feeling. Let me know if you want to talk.",
+    "You're not alone in this. Let's talk through it, one step at a time."
+]
+    response = random.choice(responses)
+    print(f"ETE: {response}")
+
 def userLeaving():   
     responses = [
         "gtg, take care! 👋",
@@ -125,7 +250,7 @@ def userLeaving():
     response = random.choice(responses)
     print(f"ETE: {response}")
 
-def general_responses():
+def general_mood_responses():
     responses=[
     "That's interesting! Tell me more. 😊",
     "Hmm, I see. What else is on your mind?",
