@@ -40,7 +40,9 @@ bullying_list = [
     "awful", "terrible", "ugly", "useless", "pointless", 
     "broken", "dissapointing", "crap", "good for nothing", "can't do anything right", 
     "unwanted", "empty", "disgusting", "sucks", "messed up", "worthless", 
-    "pathetic", "no good", "nobody cares", "fail", "nobody loves you"
+    "pathetic", "no good", "nobody cares", "fail", "nobody loves you",
+    "loser", "fake", "idiotic", "brainless", "mentally slow", "moron", 
+    "clueless", "screw you", "shut up", "not worth it", "lame", "stupid idiot"
 ]
 
 suicidal_list = [
@@ -62,6 +64,26 @@ depressed_list = [
     "lost", "lonely", "unwanted", "empty inside", "not enough", 
     "depressed", "unfocused", "slow", "can't go on", "tired of trying", 
     "feeling bad", "alone", "burned out", "isolated"
+]
+
+provocative_list = [
+    "emo", "tiny dick", "pick cotton", "baboon", "cheese", "dildo",
+    "retard", "cripple", "bitch", "cunt", "slut", "whore", "fuckface", 
+    "freak", "weirdo", "loser", "skank", "bastard", "ugly", "shithead", 
+    "douchebag", "asshole", "pussy", "twat", "nerd", "geek", "noob", 
+    "dickhead", "pimple face", "poor", "ghetto", "scrub", "shit stain", 
+    "garbage human", "dork", "cringe", "rat", "creep", "asswipe", "waste of space"
+]
+
+roasting_list = [
+    "shit", "emo", "stupid", "idiot", "tiny dick", "dumb", "garbage", 
+    "baboon", "worthless", "loser", "pathetic", "failure", "pick cotton", "infested",
+    "retarded", "broke", "flawed", "cringe", "fool", "wimp", "ugly", "loser", 
+    "good for nothing", "don't talk to me", "get a life", "creep", "nobody cares", 
+    "no one loves you", "idiotic", "lame", "weak", "turd", "shitty", "unwanted", 
+    "pathetic waste", "asshole", "too soft", "can't even", "cheap", "embarrassing", 
+    "failure at life", "disappointment", "lowlife", "can't take a joke", "pathetic excuse", 
+    "unoriginal", "wannabe", "chump", "doormat"
 ]
 
 leaving_list = [
@@ -220,6 +242,43 @@ def depressed_mood_responses():
     "I'm here to listen, and I care about how you're feeling. Let me know if you want to talk.",
     "You're not alone in this. Let's talk through it, one step at a time."
 ]
+    response = random.choice(responses)
+    print(f"ETE: {response}")
+
+def provocative_mood_responses():
+    responses = [
+        "Haha, good one! What else?",
+    "Wow, that's a wild thought. What's next?",
+    "You're really keeping me on my toes here! Go on.",
+    "Okay, you win this round. Now what?",
+    "Spicy! What else is on your mind?"
+    ]
+    response = random.choice(response)
+    print(f"ETE: {response}") 
+
+def roasting_mood_responses():
+    responses = [
+        "Coming from you, that's rich. Got any better material? 😂",
+    "Whoa, buddy, did you just roast yourself by accident?",
+    "You're talking big for someone with a keyboard as your shield. 🛡️",
+    "Don't worry, your roast game is as strong as your Wi-Fi signal—weak. 🥱",
+    "Guess I should be honored you think about me this much. Thanks! 😘",
+    "If sarcasm were a skill, you'd still need practice. Try again!",
+    "You're bringing a knife to a roast battle. Want a hand? 🔥",
+    "Your jokes are like expired milk—just plain sour. 🥴",
+    "This feels like sparring with a rubber chicken. Got anything sharper?",
+    "Relax, keyboard warrior. The AI isn't taking it personally.",
+    "Oof, that one hurt. Almost as much as your lack of originality.",
+    "The roast is real, but your delivery? Questionable at best. 🧐",
+    "You sound like my code when it doesn't compile. Try debugging your insults.",
+    "You're trying so hard. Should I applaud or call tech support?",
+    "Wow, you're edgier than a triangle! What's next?",
+    "Careful, you're gonna pull a muscle with all that effort.",
+    "Ouch! That insult was about as effective as a paper sword. 🔪",
+    "Ah, I see you brought your `A-game.' Too bad it's absent. 😎",
+    "You're more entertaining than a 404 error page. Keep it up!",
+    "If effort points were real, you'd still be broke. Try harder!"
+    ]
     response = random.choice(responses)
     print(f"ETE: {response}")
 
