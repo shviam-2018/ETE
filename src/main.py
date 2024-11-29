@@ -1,35 +1,25 @@
-from functions import (wishme, takecommand, speak_and_print, 
-                       is_assistant_task, handle_assistant_task, handle_therapist_mode)
+from functions import (wishme, chat)
+from mood import ( happy_list, sad_list, happy_mood_responses, sad_mood_responses, general_responses)
 
-while True:                    
-    def main():
-        speak_and_print("Hello! I'm Thea. Would you like to talk or chat?")
+wishme()
+    
+name = input("Please enter your name: ")
+print(f"Hi {name}, how are you feeling today?\n")
+    
+while True:
+        user_statement = input(f"{name}: ").lower()
         
-        # Choose mode: 'talk' or 'chat'
-        mode = input("Type 'talk' for voice input or 'chat' for text input: ").strip().lower()
+        # Check user's statement against mood lists and provide responses
+        if any(word in user_statement for word in happy_list):
+            happy_mood_responses()
+        elif any(word in user_statement for word in sad_list):
+            sad_mood_responses()
+        elif user_statement == "ok thanks for the session":
+            print("ETE: Ok then, see you next time! Take care. 👋")
+            break
+        else:
+            general_responses()
 
-        if mode not in ["talk", "chat"]:
-            speak_and_print("Sorry, I didn't understand that. Please restart and choose 'talk' or 'chat'.")
-            return
-
-        wishme()
-        brake
-
-        while True:
-            if mode == "talk":
-                user_input = takecommand().lower()
-            else:
-                user_input = input("You: ").strip().lower()
-            
-            if user_input in ["exit", "quit"]:
-                speak_and_print("Goodbye! Take care.")
-                break
-            
-            # Check for assistant task
-            if is_assistant_task(user_input):
-                handle_assistant_task(user_input)
-            else:
-                handle_therapist_mode(user_input)
-
-    if __name__ == "__main__":
-        main()
+# Run the chat function
+if __name__ == "__main__":
+    chat()

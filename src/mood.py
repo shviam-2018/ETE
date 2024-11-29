@@ -1,4 +1,3 @@
-#mood.py
 import random
 import pyttsx3
 
@@ -9,155 +8,91 @@ engine.setProperty("voice", voices[0].id)
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
-    
-#list of word that trigger the responses 
-happy_list = ["happy", "great", "good", "better", "joyful", "content", "fulfilled", "positive", "optimistic", "upbeat", "elated", "radiant", "grateful", "blissful", "satisfied", "cheerful", "exuberant", "vibrant", "ecstatic", "peaceful", "serene", "blessed", "delighted", "glorious", "heartened", "inspired", "triumphant", "zealous", "merry", "euphoric", "jovial", "gleeful", "festive", "lively", "spirited", "buoyant", "uplifting", "hopeful", "comforted", "empowered", "wonderful"]
 
-sad_list = ["sad", "negative", "boring", "melancholy", "unhappy", "disheartened", "discouraged", "gloomy", "dismal", "despondent", "downcast", "mournful", "blue", "downhearted", "crestfallen", "dejected", "forlorn", "sullen", "somber", "lugubrious", "woeful", "heartbroken", "bereaved", "mournful", "pensive", "doleful", "woebegone", "disconsolate", "lugubrious", "wistful", "regretful", "downtrodden", "defeated", "low-spirited", "demoralized", "dispirited", "apathetic", "listless", "weary", "dreary", "stifled", "glum", "uninspired", "unmotivated", "unfulfilled"]
+# Expanded mood lists with 40+ triggers
+happy_list = ["happy", "great", "good", "joyful", "excited", "grateful", "proud", "content", "delighted", "cheerful", "ecstatic", "jovial", "elated", "radiant", "upbeat", "hopeful", "optimistic", "fulfilled", "glad", "exuberant", "merry", "festive", "positive", "inspired", "blissful", "gleeful", "vivacious", "spirited", "vibrant", "uplifted", "buoyant", "triumphant", "jubilant", "cheery", "heartened", "sunny", "bright", "euphoric", "lighthearted", "overjoyed", "wonderful"]
 
-angry_list = ["angry", "irate", "enraged", "furious", "livid", "incensed", "outraged", "resentful", "indignant", "annoyed", "irritated", "agitated", "frustrated", "exasperated", "infuriated", "provoked", "cross", "mad", "upset", "offended", "vexed", "displeased", "hostile", "bitter", "resentful", "miffed", "peeved", "sulky", "testy", "tense", "grumpy", "irascible", "cranky", "impatient", "irate", "aggravated", "disgruntled", "exasperated", "hot-tempered", "short-tempered", "snappish", "touchy"]
+sad_list = ["sad", "down", "unhappy", "melancholy", "disappointed", "heartbroken", "blue", "low", "weary", "gloomy", "sullen", "mournful", "pensive", "dismal", "crestfallen", "forlorn", "despondent", "hopeless", "heavy-hearted", "tearful", "wistful", "downcast", "somber", "woeful", "dejected", "defeated", "lonely", "disheartened", "gutted", "hurt", "aching", "withdrawn", "sorrowful", "tearful", "weeping", "morose", "lugubrious", "desolate", "regretful", "dispirited", "low-spirited"]
 
-depressed_list = ["depressed", "downhearted", "melancholic", "disheartened", "blue", "low", "despondent", "despairing", "dismal", "gloomy", "forlorn", "sorrowful", "mournful", "wretched", "hopeless", "discouraged", "downtrodden", "disconsolate", "downcast", "miserable", "heavy-hearted", "sad", "unhappy", "glum", "joyless", "lugubrious", "morose", "somber", "sullen", "woeful", "tearful", "weepy", "weeping", "sulky", "pessimistic", "defeated", "crestfallen", "brokenhearted", "dejected", "desolate", "heartbroken", "inconsolable", "morbid", "unconsolable"]
+angry_list = ["angry", "mad", "furious", "annoyed", "irritated", "frustrated", "upset", "agitated", "livid", "cross", "resentful", "outraged", "fuming", "enraged", "hot-headed", "indignant", "infuriated", "provoked", "vexed", "displeased", "hostile", "irascible", "miffed", "peeved", "cranky", "grumpy", "snappy", "touchy", "short-tempered", "irate", "testy", "ticked off", "pissed", "wrathful", "raging", "explosive", "steamed", "boiling", "snappish", "tetchy", "bristling"]
 
-suicidal_list = ["suicidal", "hopeless", "desperate", "worthless", "overwhelmed", "lost", "trapped", "unbearable", "broken", "alone", "helpless", "painful", "endless", "darkness", "ending it", "ending my life", "cannot go on", "no way out", "giving up", "life is meaningless", "thinking of suicide", "suicide thoughts", "ending it all", "just want it to stop", "can't go on", "want to die", "don't want to live", "no reason to live", "wish I were dead", "I'm a burden", "tired of life", "nothing to live for", "fade away", "wish it would end", "permanent solution", "escape the pain", "end the suffering", "last resort"]
-
-# def for mood specificy responses 
+# Friendlier responses with 20+ variations
 def happy_mood_responses():
     responses = [
-        "Tell me more. It sounds interesting.",
-        "I am so happy for you!",
-        "That's fantastic news!",
-        "You're doing great!",
-        "I knew you could do it!",
-        "Your success is well-deserved.",
-        "I'm impressed by your achievements.",
-        "You're on fire today!",
-        "Congratulations! This is wonderful!",
-        "You're a star!",
-        "Your positivity is contagious.",
-        "I can see the joy in your words.",
-        "You must be so proud!",
-        "What an accomplishment!",
-        "Your hard work is paying off.",
-        "This is a major win!",
-        "You're unstoppable!",
-        "I'm thrilled to hear about your success.",
-        "Keep shining bright!",
-        "You've got the Midas touch!",
-        "I'm smiling just hearing about it!",
-        "This is a cause for celebration!",
-        "The world is better with your positivity in it."
+        "That's awesome! Tell me more!",
+        "Wow, that sounds amazing!",
+        "I'm so happy to hear that!",
+        "You totally deserve this joy!",
+        "Let's celebrate! 🎉",
+        "Your happiness is contagious!",
+        "Keep shining, superstar!",
+        "Good vibes all around!",
+        "That made my day too!",
+        "You're radiating positivity!",
+        "I love hearing that!",
+        "High five! 🙌",
+        "You're on a roll!",
+        "Tell me more about what made you smile.",
+        "That's the spirit! Keep it up!",
+        "You sound so excited; it's awesome!",
+        "Life's better with moments like these.",
+        "Your joy is my joy!",
+        "I'm all ears for more good news.",
+        "What a fantastic moment to share!"
     ]
     response = random.choice(responses)
-    print(f"Thea: {response}")
-    speak(response)
+    print(f"ETE: {response}")
+    
 
 def sad_mood_responses():
     responses = [
-        "I understand it's a tough time for you.",
-        "You're not alone; I'm here to support you.",
-        "It's okay to feel a bit down sometimes.",
-        "I'm here to listen and help you navigate through your emotions.",
-        "Take a deep breath; we can work through this together.",
-        "Remember, emotions are a natural part of being human.",
-        "Feel free to share more about what's on your mind; I'm here to listen.",
-        "In challenging times, expressing your feelings can be a positive step.",
-        "Your emotions are valid; let's explore them together.",
-        "You have the strength to overcome these feelings.",
-        "I appreciate your openness in sharing your emotions.",
-        "Let's find ways to bring a bit of light into your day.",
-        "It's okay not to be okay; we'll take one step at a time.",
-        "Your well-being is important, and I'm here to support you.",
-        "Sometimes, acknowledging your emotions is the first step towards healing."
+        "I'm here for you. Want to talk more?",
+        "Hey, it's okay to feel down sometimes.",
+        "I get it. Rough days happen. Let's get through it together.",
+        "I'm sending you a big virtual hug.",
+        "You're stronger than you think. Let's chat.",
+        "It's okay to not be okay. I'm with you.",
+        "Do you want to share what's on your mind?",
+        "I'm really sorry you're feeling this way.",
+        "Let's find a little light in this together.",
+        "You matter, and your feelings matter too.",
+        "I'm listening; take your time.",
+        "I wish I could give you a real hug.",
+        "It's tough, but I know you can handle this.",
+        "I believe in you. You've got this.",
+        "You're not alone; I'm here for you.",
+        "Want to talk about something that makes you happy?",
+        "I care about you, no matter what.",
+        "Your feelings are valid. Let's work through them.",
+        "Even on cloudy days, you're not alone.",
+        "Let's get through this together, step by step."
     ]
-    response = random.choice(responses)
-    print(f"Thea: {response}")
-    speak(response)
-
-def angry_mood_responses():
-    responses = [
-        "I can sense your frustration; it's okay to feel angry.",
-        "Anger is a powerful emotion. Let's explore what triggered it.",
-        "Your feelings are valid, including anger. What happened?",
-        "Expressing anger is a natural part of being human. Let's discuss it.",
-        "Anger can be a signal. What do you think might be the root cause?",
-        "It's alright to be angry; let's find a constructive way to address it.",
-        "I'm here to listen without judgment. What's on your mind?",
-        "Anger can be a motivator for change. How can we channel it positively?",
-        "Take a moment to breathe. We can work through the source of your anger.",
-        "Remember, it's okay to set boundaries and express your needs.",
-        "Let's find a solution together. Your perspective is important.",
-        "Anger is a temporary emotion; we'll find a way to navigate through it.",
-        "In moments of anger, self-reflection can lead to growth. What are you feeling?",
-        "I appreciate your honesty about your emotions. Let's address them together."
-    ]
-    response = random.choice(responses)
-    print(f"Thea: {response}")
-    speak(response)
-
-
-def depressed_mood_responses():
-    responses = [
-        "I'm truly sorry to hear that you're feeling this way.",
-        "You're not alone; I'm here to support you through this.",
-        "It's okay to feel overwhelmed. We'll take things step by step.",
-        "You have the strength to navigate through these emotions.",
-        "You don't have to face it alone; I'm here to listen and help.",
-        "Let's explore these feelings together in a safe and supportive space.",
-        "Your well-being is important, and I'm here to offer assistance.",
-        "Reaching out for help is a brave step. I'm here for you.",
-        "In difficult times, small steps can lead to positive changes.",
-        "You're not alone in facing challenges. Many have found their way to healing.",
-        "It's okay to seek support; we can work through this together.",
-        "Your feelings are valid, and I'm here to provide a listening ear.",
-        "We'll find coping strategies together to make things more manageable.",
-        "Taking care of your mental health is a courageous choice. Let's do it together."
-    ]
-    response = random.choice(responses)
-    print(f"Thea: {response}")
-    speak(response)
-    
-def suicidal_mood_responses():
-        responses = [
-        "I'm really sorry to hear that you're feeling this way. It's important to talk to someone who can provide support.",
-        "It's okay to ask for help. Consider reaching out to a friend, family member, or mental health professional.",
-        "You're not alone. Many people care about you, and there are resources available to support you.",
-        "Please don't hesitate to talk to someone you trust about your feelings. They may be able to offer assistance and comfort.",
-        "I'm here for you, but it's crucial to connect with those who can provide immediate help. Consider contacting a helpline or a mental health professional.",
-        "Remember, your feelings are valid, and seeking help is a sign of strength.",
-        "Even in the darkest moments, there is hope. Reach out to someone you trust and let them support you.",
-        "Taking the first step to talk about your feelings is a brave and important decision. You're not alone on this journey.",
-        "Your well-being matters, and there are people who want to help. Consider speaking to a mental health professional for guidance.",
-        "It's important to prioritize your safety. Connect with someone you trust or a mental health professional as soon as possible.",
-        "If you're struggling, please don't face it alone. Reach out to someone who cares about you or contact a mental health helpline.",
-        ]
-        responses = random.choice(responses)
-        print(f"Thea: {responses}")
-        speak(responses) 
-    
-def general_responses():
-    responses = [
-        "Okay, can you tell me more?",
-        "I'm here to listen. Please share more.",
-        "I'm interested in hearing more. Go ahead.",
-        "Feel free to elaborate. What else is on your mind?",
-        "You have my attention. Share more details, if you'd like.",
-        "I'm here to help. Tell me more about it.",
-        "I appreciate your openness. Is there anything specific you'd like to discuss?",
-        "Your thoughts are important. Let's explore them together.",
-        "Thank you for sharing. Is there a particular aspect you want to focus on?",
-        "I'm here to support you. What would you like to talk about?",
-        "In our conversation, your comfort is a priority. Feel free to express yourself.",
-        "Your feelings matter. How can I assist you today?",
-        "Sharing your thoughts is a positive step. What else would you like to share?",
-        "It's okay to take your time. When you're ready, I'm here to listen.",
-        "Your perspective is valuable. Can you provide more details?",
-        "I'm curious to learn more about your thoughts. Please share when you're ready.",
-        "Every conversation is a chance for understanding. What would you like to discuss?",
-        "Your emotions are valid. Let's navigate through them together.",
-        "Thank you for opening up. How can we make this conversation most helpful for you?",
-    ]
-
     response = random.choice(responses)
     print(f"ETE: {response}")
-    speak(response) 
+    
+
+def general_responses():
+    responses=[
+        "That's interesting! Tell me more. 😊",
+    "Hmm, I see. What else is on your mind?",
+    "I'm here to listen, go ahead. 🌟",
+    "That's cool! Do you have any other thoughts to share?",
+    "I understand. How does that make you feel?",
+    "Wow, really? Tell me more about it!",
+    "I'm all ears. What else would you like to discuss?",
+    "That sounds great! What's next?",
+    "I'm glad we're having this chat. What's on your mind?",
+    "That's something worth talking about! Keep going.",
+    "I love hearing your thoughts! Share more.",
+    "Interesting perspective! How do you feel about it?",
+    "Let's dive deeper. What are your thoughts on that?",
+    "Your insights are fascinating! Want to elaborate?",
+    "I'm here for you. What else would you like to say?",
+    "That's a good point! What made you think of that?",
+    "I appreciate you sharing this with me. 😊",
+    "That's really thoughtful. Any other ideas?",
+    "Keep going, I'm really enjoying our chat!",
+    "I like how you think! What else is on your mind?"
+    ]
+    response = random.choice(responses)
+    print(f"ETE: {response}")
