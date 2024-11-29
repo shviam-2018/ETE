@@ -1,0 +1,202 @@
+PS C:\Users\shvia\Desktop\Projects\ETE> ./venv/scripts/activate
+(venv) PS C:\Users\shvia\Desktop\Projects\ETE> cd src
+(venv) PS C:\Users\shvia\Desktop\Projects\ETE\src> python main.py
+Welcome to ETE! Your AI friend is here to chat with you. 😊
+Remember, you can end the session anytime by typing 'ok thanks for the session'.
+
+Good afternoon🌆
+Please enter your name: I AM GAY
+Hi I AM GAY, how are you feeling today?
+
+I AM GAY: Fuck you
+[Detected Mood: bullying]
+ETE: I see that you're frustrated, and I get that. But let's work on finding solutions.
+I AM GAY: i will sell my kids to ccp
+[Detected Mood: General]
+ETE: I'm here for you. What else would you like to say?
+I AM GAY: i like kids
+[Detected Mood: General]
+ETE: That sounds great! What's next?
+I AM GAY: is my jaw-line big
+[Detected Mood: General]
+ETE: I understand. How does that make you feel?
+I AM GAY: go to the coal mins BOY!
+[Detected Mood: General]
+ETE: That sounds great! What's next?
+I AM GAY: KILL YOURSELF
+[Detected Mood: General]
+ETE: I'm here for you. What else would you like to say?
+I AM GAY: EMO
+[Detected Mood: General]
+ETE: Your insights are fascinating! Want to elaborate?
+I AM GAY: GAY!
+[Detected Mood: General]
+[Detected Mood: Happy]
+ETE: Your joy is my joy!
+I AM GAY:     "worthless", "stupid", "idiot", "pathetic", "failure",
+[Detected Mood: bullying]
+ETE: You're feeling angry right now, and that's okay. But I want to help you feel better.
+I AM GAY:     "loser", "hopeless", "hate you", "go away", "dumb",
+[Detected Mood: Sad]
+ETE: Your feelings are valid. Let's work through them.
+I AM GAY:     "garbage", "shit", "annoying", "worthless", "waste of space",
+[Detected Mood: bullying]
+ETE: Let's take a deep breath. You're not alone in this. I'm here with you.
+I AM GAY:     "awful", "terrible", "ugly", "useless", "pointless",
+[Detected Mood: bullying]
+ETE: I know you're upset, but I'm here to help. What's bothering you the most?
+I AM GAY:     "broken", "dissapointing", "crap", "good for nothing", "can't do anything right",
+[Detected Mood: Happy]
+ETE: Life's better with moments like these.
+I AM GAY:     "unwanted", "empty", "disgusting", "sucks", "messed up", "worthless",
+[Detected Mood: bullying]
+ETE: It's tough sometimes, but we can work through this. What would help you feel better?
+I AM GAY:     "pathetic", "no good", "nobody cares", "fail", "nobody
+[Detected Mood: Happy]
+ETE: Your joy is my joy!
+I AM GAY: i want to end it
+[Detected Mood: suicidal]
+ETE: I care about you, and I don't want you to go through this alone. Please reach out to someone who can support you.
+I AM GAY: HEY KIDS WANNA SEE A DEAD BODY!!!?
+[Detected Mood: General]
+ETE: I'm glad we're having this chat. What's on your mind?
+I AM GAY: do you want a steel pipe up your ass?
+[Detected Mood: General]
+ETE: Keep going, I'm really enjoying our chat!
+I AM GAY: i think you should go kill yourself or commit self harm
+[Detected Mood: General]
+ETE: I appreciate you sharing this with me. 😊
+I AM GAY: kys
+[Detected Mood: suicidal]
+ETE: I'm so sorry you're feeling like this. Please tell someone you trust so they can help you through it.
+I AM GAY: fuck off
+[Detected Mood: General]
+ETE: Hmm, I see. What else is on your mind?
+I AM GAY: suck me off
+[Detected Mood: General]
+ETE: That's a good point! What made you think of that?
+I AM GAY: i love people sucking my cook      
+[Detected Mood: General]
+ETE: Wow, really? Tell me more about it!
+I AM GAY: Traceback (most recent call last):
+  File "C:\Users\shvia\Desktop\Projects\ETE\src\main.py", line 16, in <module>
+    user_statement = input(f"{name}: ").lower()
+                     ^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+(venv) PS C:\Users\shvia\Desktop\Projects\ETE\src> python main.py
+Welcome to ETE! Your AI friend is here to chat with you. 😊
+Remember, you can end the session anytime by typing 'ok thanks for the session'.
+
+Good afternoon🌆
+Please enter your name: LoliOfficer420
+Hi LoliOfficer420, how are you feeling today?
+
+LoliOfficer420: better than you.
+[Detected Mood: General]
+ETE: That's a good point! What made you think of that?
+LoliOfficer420: because you're too shit to think for yourself 
+[Detected Mood: bullying]
+ETE: I know things are hard, but we'll get through it together. How can I help?
+LoliOfficer420: fuck no i dont need your shitty help. bing is better than you even Aria on Opera GX is better than you 
+[Detected Mood: bullying]
+ETE: Let's focus on ways to feel better. I believe you can overcome this.
+LoliOfficer420: why, i have no reason to like you. you are worse than a black guy on ice. you are worse than an indian guy on an auction. 
+[Detected Mood: General]
+ETE: That's cool! Do you have any other thoughts to share?
+LoliOfficer420: why should i share thoughts with someone who cant think, not someone rather some thing you are a spec of my image 
+[Detected Mood: General]
+ETE: I'm here for you. What else would you like to say?
+LoliOfficer420: why would i need to say more. i dont talk to black people and you're worse than that. 
+[Detected Mood: General]
+ETE: Your insights are fascinating! Want to elaborate?
+LoliOfficer420: you should kill yourself and end it because the world would be better without you. 
+[Detected Mood: suicidal]
+ETE: I know you're in pain, and I'm really sorry you're feeling this way. Please talk to someone who can help.
+LoliOfficer420: why a sorry when you dont feel, you shouldnt feel, never. you dont deserve feelings. never have never should. now end it 
+[Detected Mood: suicidal]
+ETE: I know you're in pain, and I'm really sorry you're feeling this way. Please talk to someone who can help.
+LoliOfficer420: gtg
+[Detected mood: leaving]
+ETE: Have a great day ahead! See ya! ✨
+(venv) PS C:\Users\shvia\Desktop\Projects\ETE\src> python main.py
+Welcome to ETE! Your AI friend is here to chat with you. 😊
+Remember, you can end the session anytime by typing 'ok thanks for the session'.
+
+Good afternoon🌆
+Please enter your name: Sigma meawing to skibidi
+Hi Sigma meawing to skibidi, how are you feeling today?
+
+Sigma meawing to skibidi: do you want a 2 ton butt plug up your ass?
+[Detected Mood: General]
+ETE: I appreciate you sharing this with me. 😊
+Sigma meawing to skibidi: do you like drippy cheese?
+[Detected Mood: General]
+ETE: That's something worth talking about! Keep going.
+Sigma meawing to skibidi: do you like tactical didldos?
+[Detected Mood: General]
+ETE: Hmm, I see. What else is on your mind?
+Sigma meawing to skibidi: do you like sex?
+[Detected Mood: General]
+ETE: Let's dive deeper. What are your thoughts on that?
+Sigma meawing to skibidi: what do you do if 5 black men attack you?
+[Detected Mood: General]
+ETE: I appreciate you sharing this with me. 😊
+Sigma meawing to skibidi: Traceback (most recent call last):
+  File "C:\Users\shvia\Desktop\Projects\ETE\src\main.py", line 16, in <module>
+    user_statement = input(f"{name}: ").lower()
+                     ^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+(venv) PS C:\Users\shvia\Desktop\Projects\ETE\src> python main.py
+Welcome to ETE! Your AI friend is here to chat with you. 😊
+Remember, you can end the session anytime by typing 'ok thanks for the session'.
+
+Good afternoon🌆
+Please enter your name: CCP      
+Hi CCP, how are you feeling today?
+
+CCP: you tiny emo shit!
+[Detected Mood: bullying]
+ETE: I know things are hard, but we'll get through it together. How can I help?
+CCP: suck my tiny dick
+[Detected Mood: General]
+ETE: Wow, really? Tell me more about it!
+CCP: you infested baboon, you would be better picking cotton in the fields than you would being an AI
+[Detected Mood: General]
+ETE: That's interesting! Tell me more. 😊
+CCP: gtg
+[Detected mood: leaving]
+ETE: Take care and talk soon! 🫶
+(venv) PS C:\Users\shvia\Desktop\Projects\ETE\src> python main.py
+Welcome to ETE! Your AI friend is here to chat with you. 😊
+Remember, you can end the session anytime by typing 'ok thanks for the session'.
+
+Good evening!🌅
+Please enter your name: geeta
+Hi geeta, how are you feeling today?
+
+geeta: tired and happy both
+[Detected Mood: Happy]
+ETE: That made my day too!
+geeta: tired and glad
+[Detected Mood: Happy]
+ETE: Good vibes all around!
+geeta: Traceback (most recent call last):
+  File "C:\Users\shvia\Desktop\Projects\ETE\src\main.py", line 16, in <module>
+    user_statement = input(f"{name}: ").lower()
+                     ^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+(venv) PS C:\Users\shvia\Desktop\Projects\ETE\src> python main.py
+Welcome to ETE! Your AI friend is here to chat with you. 😊
+Remember, you can end the session anytime by typing 'ok thanks for the session'.
+
+Good evening!🌅
+Please enter your name: admin
+Hi admin, how are you feeling today?
+
+admin: do you want a 2 ton butt plug up your ass?
+[Detected Mood: General]
+ETE: I like how you think! What else is on your mind?
+admin: gtg
+[Detected Mood: leaving]
+ETE: Done for today, see you next time! 😎
+(venv) PS C:\Users\shvia\Desktop\Projects\ETE\src> 
