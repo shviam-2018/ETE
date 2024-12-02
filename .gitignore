@@ -1,4 +1,5 @@
 ETE/
-reference/
+src/ete-react/node_modules
+src/ete-react/backend/node_modules
 venv/
 .vscode/
