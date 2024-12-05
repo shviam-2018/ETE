@@ -253,7 +253,7 @@ def provocative_mood_responses():
     "Okay, you win this round. Now what?",
     "Spicy! What else is on your mind?"
     ]
-    response = random.choice(response)
+    response = random.choice(responses)
     print(f"ETE: {response}") 
 
 def roasting_mood_responses():
