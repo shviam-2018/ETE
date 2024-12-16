@@ -89,6 +89,11 @@ const leaving_list = [
   "I'm heading out", "see ya", "time to go", "I'm off now", "heading out"
 ]
 
+//responses fetcher
+function getRandomResponse(responseList) {
+  const randomIndex = Math.floor(Math.random() * responseList.length);
+  return responseList[randomIndex];
+}
 
 // responses
 const happyResponses = [
@@ -312,36 +317,36 @@ app.post('/api/message', (req, res) => {
   // Check for trigger words and set the mood
   if (happy_list.some(word => message.toLowerCase().includes(word))) {
     moodDetected = "Happy";
-    responseMessage = happyMoodResponse();
+    responseMessage = getRandomResponse(happyResponses);
   } else if (sad_list.some(word => message.toLowerCase().includes(word))) {
     moodDetected = "Sad";
-    responseMessage = sadMoodResponse();
+    responseMessage = getRandomResponse(sadResponses);
   } else if (angry_list.some(word => message.toLowerCase().includes(word))) {
     moodDetected = "Angry";
-    responseMessage = angryMoodResponse();
+    responseMessage = getRandomResponse(angryResponses);
   } else if (bullying_list.some(word => message.toLowerCase().includes(word))) {
     moodDetected = "Bullying";
-    responseMessage = bullyingMoodResponse();
+    responseMessage = getRandomResponse(bullyingResponses);
   } else if (suicidal_list.some(word => message.toLowerCase().includes(word))) {
     moodDetected = "Suicidal";
-    responseMessage = suicidalMoodResponse();
+    responseMessage = getRandomResponse(suicidalResponses);
   } else if (depressed_list.some(word => message.toLowerCase().includes(word))) {
     moodDetected = "Depressed";
-    responseMessage = depressedMoodResponse();
+    responseMessage = getRandomResponse(depressedResponses);
   } else if (provocative_list.some(word => message.toLowerCase().includes(word))) {
     moodDetected = "Provocative";
-    responseMessage = provocativeMoodResponse();
+    responseMessage = getRandomResponse(provocativeResponses);
   } else if (roasting_list.some(word => message.toLowerCase().includes(word))) {
     moodDetected = "Roasting";
-    responseMessage = roastingMoodResponse();
+    responseMessage = getRandomResponse(roastingResponses);
   } else if (leaving_list.some(word => message.toLowerCase().includes(word))) {
     moodDetected = "Leaving";
-    responseMessage = userLeavingResponse();
+    responseMessage = getRandomResponse(userLeaving);
   } else if (message === "ping") {
     responseMessage = "Active"
   } else{
     moodDetected = "Genral response";
-    responseMessage = generalResponses();
+    responseMessage = getRandomResponse(generalResponses);
   }
 
   console.log(`[Detected Mood: ${moodDetected}]`);
@@ -351,6 +356,6 @@ app.post('/api/message', (req, res) => {
 });
 
 // Start the server
-app.listen(5000, () => {
+app.listen(5000, '0.0.0.0', () => {
   console.log('Server is running on port 5000');
 });
